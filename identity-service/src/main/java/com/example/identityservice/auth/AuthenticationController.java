@@ -14,7 +14,6 @@ public class AuthenticationController {
 
     private final AuthenticationService service;
 
-    // TO-DO: register must not work if the email already exists in the db
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(@RequestBody RegisterRequest request) {
         return ResponseEntity.ok(service.register(request));
