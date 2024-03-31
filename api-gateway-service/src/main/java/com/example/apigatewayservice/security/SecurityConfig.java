@@ -25,8 +25,8 @@ public class SecurityConfig {
         http
                 .csrf(ServerHttpSecurity.CsrfSpec::disable)
                 .authorizeExchange(exchanges -> exchanges
-                        .pathMatchers("/identity-service/api/v1/auth/register",
-                                "/identity-service/api/v1/auth/authenticate","/demo-controller/api/test/demo-controller/greet","/identity-service/api/v1/auth/logout")
+                        .pathMatchers("/identity-service/api/auth/register",
+                                "/identity-service/api/auth/authenticate","/demo-controller/api/test/demo-controller/greet","/identity-service/api/auth/logout")
                         .permitAll()
                 )
                 .addFilterAt(customAuthenticationFilter, SecurityWebFiltersOrder.AUTHENTICATION);
