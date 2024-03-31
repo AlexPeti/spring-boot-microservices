@@ -32,8 +32,12 @@ public class AuthenticationService {
                 .password(passwordEncoder.encode(request.getPassword()))
                 .role(Role.USER)
                 .build();
-        var savedUser = repository.save(user);
 
+        if (repository.findByEmail(request.getEmail()).isPresent()) {
+            throw new IllegalArgumentException("Username already exists.");
+        }
+
+        var savedUser = repository.save(user);
         var jwtToken = jwtService.generateToken(user);
         saveUserToken(savedUser, jwtToken);
 
