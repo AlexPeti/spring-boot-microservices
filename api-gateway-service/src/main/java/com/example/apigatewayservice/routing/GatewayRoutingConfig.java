@@ -13,10 +13,10 @@ public class GatewayRoutingConfig {
 
     public RouteLocator routes(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route(r -> r.path("/identity-service/api/v1/auth/register",
-                                "/identity-service/api/v1/auth/authenticate")
+                .route(r -> r.path("/identity-service/api/auth/register",
+                                "/identity-service/api/auth/authenticate")
                         .uri("lb://identity-service"))
-                .route(r -> r.path("/identity-service/api/v1/auth/logout")
+                .route(r -> r.path("/identity-service/api/auth/logout")
                         .filters(f -> f.filter((GatewayFilter) filter))
                         .uri("lb://identity-service"))
                 .route(r -> r.path("/demo-controller/api/test/demo-controller/greet")
