@@ -1,6 +1,5 @@
 package com.example.identityservice.auth;
 
-import com.example.identityservice.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

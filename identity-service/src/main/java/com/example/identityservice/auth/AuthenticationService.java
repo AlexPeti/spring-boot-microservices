@@ -1,6 +1,5 @@
 package com.example.identityservice.auth;
 
-
 import com.example.identityservice.token.JwtService;
 import com.example.identityservice.token.Token;
 import com.example.identityservice.token.TokenRepository;
