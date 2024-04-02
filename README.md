@@ -1,8 +1,6 @@
 # spring-boot-microservices
 A project showcasing microservices architecture using Spring Boot 3.2.4 and Java 17
 
-# Project Rationale: Demonstrating Core Concepts in Microservices Architecture
-
 This project's aim is showcasing the basic structure of a microservices architecture, their essential components
 and their interactions within a microservices ecosystem.
 
